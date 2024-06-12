@@ -2,6 +2,7 @@ package database
 
 import (
 	"database/sql"
+	"errors"
 	"os"
 
 	"github.com/joho/godotenv"
@@ -11,7 +12,11 @@ import (
 var db *sql.DB
 
 func OpenConnection() error {
-	err := godotenv.Load("../../.env")
+	envPath := os.Getenv("ENV_PATH")
+	if envPath == "" {
+		return errors.New("ENV_PATH not set")
+	}
+	err := godotenv.Load(envPath)
 	if err != nil {
 		return err
 	}
