@@ -12,35 +12,34 @@ import {
   SignedIn,
   UserButton
 } from "@clerk/nextjs"
+import SpotlightView from "@/components/ui/SpotlightView"
+import React from "react"
 
 export default function LandingPage() {
+
+  const spotlightButton = (
+    <div className="flex flex-col gap-8 sm:flex-row">
+      <button className="px-12 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
+        Login
+      </button>
+      <button className="px-12 py-2 bg-green-600 hover:bg-green-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
+        Sign Up
+      </button>
+    </div>
+  )
+  const spotlightSubtitle = "Track and manage your expenses, categorize your spending, and get personalized insights to help you stay on top of your financial goals."
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-              <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    Unlock the Power of the Web
-                  </h1>
-                  <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                    Discover the ultimate platform for building and deploying exceptional web experiences.
-                  </p>
-                </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Link
-                    href="#"
-                    className="inline-flex h-10 items-center justify-center rounded-md px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                    prefetch={false}
-                  >
-                    Get Started
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
+        <section className="w-full md:pb-8">
+          <SpotlightView
+            className="-top-40 left-0 md:left-60 md:-top-20"
+            fill="white"
+            title="Fintron"
+            title2="Take control of your finances"
+            subTitle={spotlightSubtitle}
+            button={spotlightButton}
+            />
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
           <div className="container px-4 md:px-6">
