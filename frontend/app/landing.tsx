@@ -1,17 +1,6 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/LUFyeXL7XxT
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
 import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { 
-  SignedOut,
-  SignInButton,
-  SignedIn,
-  UserButton
-} from "@clerk/nextjs"
 import SpotlightView from "@/components/ui/SpotlightView"
 import React from "react"
 
