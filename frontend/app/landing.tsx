@@ -16,17 +16,6 @@ import SpotlightView from "@/components/ui/SpotlightView"
 import React from "react"
 
 export default function LandingPage() {
-
-  const spotlightButton = (
-    <div className="flex flex-col gap-8 sm:flex-row">
-      <button className="px-12 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
-        Login
-      </button>
-      <button className="px-12 py-2 bg-green-600 hover:bg-green-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
-        Sign Up
-      </button>
-    </div>
-  )
   const spotlightSubtitle = "Track and manage your expenses, categorize your spending, and get personalized insights to help you stay on top of your financial goals."
   return (
     <div className="flex flex-col min-h-[100dvh]">
@@ -38,7 +27,6 @@ export default function LandingPage() {
             title="Fintron"
             title2="Take control of your finances"
             subTitle={spotlightSubtitle}
-            button={spotlightButton}
             />
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
