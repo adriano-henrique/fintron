@@ -9,7 +9,8 @@ import SettingsIcon from "./icons/SettingsIcon";
 import { useState } from "react";
 
 export default function DashboardNavbar() {
-    const [activeTab, setActiveTab] = useState("dashboard")
+    const tab = window.location.pathname.split("/").pop()
+    const [activeTab, setActiveTab] = useState(tab ?? "dashboard")
     return (
         <nav className="flex flex-col bg-gray-950 p-4 text-gray-400 dark:bg-gray-950 dark:text-gray-400 md:w-64 md:p-6">
         <div className="mb-8 flex items-center gap-2">
