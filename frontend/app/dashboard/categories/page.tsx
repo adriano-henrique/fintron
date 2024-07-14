@@ -1,4 +1,8 @@
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { categories } from "@/app/lib/mocks/categories";
+import { Button } from "@/components/ui/button";
+import { PlusIcon } from "lucide-react";
+import CategoriesCardContent from "./components/CategoriesCardContent";
 
 export default function Page() {
     return (
@@ -10,6 +14,12 @@ export default function Page() {
                             <CardTitle>Manage Categories</CardTitle>
                             <CardDescription>Create, update, and delete categories and subcategories.</CardDescription>
                         </CardHeader>
+                        <CardContent>
+                            <Button variant="default" size="sm">
+                                Manage Categories
+                            </Button>
+                            <CategoriesCardContent categories={categories} />
+                        </CardContent>
                     </Card>
                 </div>
             </main>
