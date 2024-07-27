@@ -23,6 +23,7 @@ func BuildRoutes(db *sql.DB) *gin.Engine {
 
 	categoriesGroupRouter(&routerConfig)
 	subCategoriesGroupRouter(&routerConfig)
+	healthGroupRouter(&routerConfig)
 
 	return r
 }
